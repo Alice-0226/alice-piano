@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="石川県小松市のアリス音楽教室。子ども・親子向けの個別ピアノレッスン。無料体験受付中！">
+    <meta name="keywords" content="ピアノ教室,子供,個別指導,ピアノ,音楽教室,子供向け, 個別レッスン, 親子,連弾, 小松市,石川県, 初心者, 音楽レッスン">
+    <meta name="author" content="アリス音楽教室">
+    <title>小松市のアリス音楽教室｜子どもと親子向けピアノレッスン</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        .main-visual-text {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 54px;
+            font-weight: 700;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            font-family: 'Playfair Display', serif;
+            z-index: 10;
+            white-space: nowrap;
+            background-color: #e0ffff;
+            background-color: rgba(255, 204, 203, 0.5); 
+            border-radius: 15px;
+         text-shadow: 
+        -2px -2px 6px black, 
+         2px -2px 6px black, 
+        -2px  2px 6px black, 
+         2px  2px 6px black; /* ぼかし効果を追加 */
+         opacity: 0;
+         animation: fadeInUp 5s ease-out forwards;
+         }
+                 @keyframes fadeInUp {
+            from {
+                transform: translate(-50%, 100%);
+                opacity: 0;
+            }
+            to {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+        }
+
+            body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        @media (max-width: 768px) {
+    .overview-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .overview-section img {
+        width: 80%;
+    }
+}
+
+        /* 教室概要2段構成 */
+        .overview-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+                .overview-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            width: 100%; /* 横幅を広げる */
+    		max-width: 1400px; /* 最大幅を1400pxに */
+    		margin-left: auto;
+    		margin-right: auto;
+        }
+
+        .overview-section img {
+            width: 45%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .overview-text {
+            flex: 1.2;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+        /* ロゴアニメーション */
+        .animation-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 1;
+            transition: opacity 2s ease;
+        }
+
+        .logo {
+            width: 300px;
+            animation: jumpBounce 2.5s ease-in-out forwards;
+        }
+
+        @keyframes jumpBounce {
+            0% {
+                transform: translateX(-200%) scale(0.8);
+            }
+            50% {
+                transform: translateX(20%) scale(1.1);
+            }
+            75% {
+                transform: translateX(-10px) scale(0.95);
+            }
+            100% {
+                transform: translateX(0) scale(1);
+            }
+        }
+
+        header {
+            background: #fff;
+            padding: 15px 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 80px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            white-space: nowrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 15px;
+            font-size: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            z-index: -1;
+            transition: left 0.3s ease;
+        }
+
+        nav a:hover::before {
+            left: 0;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        section {
+            padding: 70px 50px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 34px;
+            color: #444;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .overview-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-section {
+            flex: 1;
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .slider-section img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 2s ease;
+        }
+
+        .slider-section img.active {
+            opacity: 1;
+        }
+
+        .overview-text {
+            flex: 1;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: linear-gradient(90deg, #ffda79, #ffa500);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+.access-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: 0;
+}
+
+.access-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: stretch; /* 要素を同じ高さに */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.parking-info, .map-container {
+    flex: 1;
+    max-width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+        /* 教室概要3段構成 */
+        .overview-content, .overview-section {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+
+        .overview-text {
+            flex: 1;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        /* 問い合わせフォーム */
+        .contact-form {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form label {
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form select, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: green;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+         
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .header-container img {
+            height: 60px;
+        }
+
+.line-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.line-text {
+    font-size: 22px; /* 文字サイズを大きく */
+    font-weight: bold; /* 太字 */
+    color: #008000;
+    flex-grow: 1;
+    position: relative;
+    left: 80px; /* 画像の右側に配置 */
+    top: -10px;
+    transform: translateY(-50%);
+    white-space: nowrap; /* テキストが折り返されるのを防ぐ */
+}
+        }
+        .line-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .line-text-large {
+            font-size: 30px;
+            font-weight: bold;
+            color: #008000;
+            text-align: center;
+            margin-top: 10px;
+        }   
+            
+        }  
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .pricing-table th, .pricing-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+
+        }
+        .pricing-table th {
+            background-color: pink;
+        }
+        .pricing-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pricing-container h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .pricing-note {
+            font-size: 22px;
+            font-weight: bold;
+            color: black;
+        }
+                .pricing-table td:first-child {
+            width: 18%; /* 一文字分広げる */
+        }
+        .pricing-table td:nth-child(2) {
+            width: 10%; /* 一文字分広げる */
+        }
+        .highlight-green {
+            background-color: #d0f0c0;
+        }
+                .instructor-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .instructor-container img {
+            width: 350px;
+            transition: transform 0.3s ease;
+        }
+        .instructor-container img:hover {
+            transform: scale(1.1);
+        }
+        .overview-text {
+            flex: 1;
+            font-size: 20px;
+            line-height: 1.8;
+        }    
+        .overview-text2 {
+    text-align: center;
+} 
+		.section_A {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+        background-color: #ffc0cb; /* 背景色を追加 */
+        padding: 30px; /* 内側の余白 */
+        border-radius: 10px; /* 角を丸くする */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+    }
+		.section_B {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+        background-color: white; /* 背景色を追加 */
+        padding: 30px; /* 内側の余白 */
+        border-radius: 10px; /* 角を丸くする */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+    }
+    .highlight-title {
+    background-color: #ffb6c1;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 8px;
+    font-weight: bold;
+}
+    .highlight-title2 {
+    background-color: #98fb98;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 8px;
+    font-weight: bold;
+}
+    .highlight-title3 {
+    background-color: #98fb98;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 8px;
+    font-weight: bold;
+}
+        .cta-button {
+            display: block;
+            width: 70%;
+            max-width: 240px;
+            background-color: #ff4081;
+            color: #fff;
+            text-align: center;
+            padding: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 10px auto;
+            transition: 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #e91e63;
+        }
+             </style>
+</head>
+<body>
+    <!-- ロゴアニメーション部分 -->
+    <div class="animation-container" id="logoAnimation">
+        <img src="logo2.png" alt="ロゴ" class="logo">
+    </div>
+
+    <!-- ページ本体 -->
+    <header>
+    <img src="logo2.png" alt="ピアノ教室ロゴ" style="height: 60px;">
+    <div class="line-container">
+        <img src="https://qr-official.line.me/gs/M_816cipfh_BW.png?oat_content=qr" alt="LINE QRコード" style="height: 60px; width: auto;">
+        <span class="line-text"><font size="3" color="#008000"><b>← LINE公式アカウントからもお問い合わせ受け付けてます</b></font>
+</span>
+    
+    </div>
+            <nav>
+            <a href="#home">当教室について</a>
+            <a href="#pricing">料金プラン</a>
+            <a href="#instructor">講師紹介</a>
+            <a href="#contact">お問合せ</a>
+            <a href="#video">動画</a>
+            <a href="#access">アクセス情報</a>
+        </nav>
+    </header>
+
+    <!-- メインビジュアル -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="e.jpg" alt="ピアノ教室1">
+            </div>
+            <div class="swiper-slide">
+                <img src="aa.jpg" alt="ピアノ教室2">
+            </div>
+        </div>
+        <div class="main-visual-text">
+            🎶 弾けた！が自信になる♪ 初めてでも安心の個別レッスン 🎶<br>
+                     <a href="#contact" class="cta-button">📩 無料体験申し込み</a>
+                   </div>
+    </div>
+
+    <!-- 教室の概要セクション -->
+    <section id="home">
+        <h2>🎹 当教室について 🎹</h2>
+        <div class="overview-content">
+            <div class="slider-section" id="overviewSlider">
+                <img src="20220908（6）_0.jpg" alt="教室写真1" class="active">
+                <img src="20220908（10）_0.jpg" alt="教室写真2">
+            </div>
+            <div class="overview-text">
+                <h3 class="highlight-title" style="font-size: 26px; color: #222; text-align: center;">初めてでも安心！<br>お子さまに寄り添ったレッスン</h3>
+                <p><strong>「うちの子、続けられるかな…」そんなご心配は不要<br> です！</strong><br>
+当教室では、優しい講師が<strong>「楽しい！」</strong>を大切にした個別指導を行っています。<br>
+お子さま一人ひとりのペースに合わせ、<strong>無理なくステップアップ</strong>できるから 「初めてのピアノ」も安心してスタートできます。</p>
+            </div>
+        </div>
+        <div class="overview-section">
+            <div class="overview-text">
+                <h3 class="highlight-title" style="font-size: 26px; color: #222; text-align: center;">親子で楽しめる連弾レッスン！ </h3>
+                <p>親御さんのご希望があれば、<strong>親子連弾レッスン</strong>も可能です。 
+                一緒に演奏することで<strong>協調性やリズム感</strong>が育まれ、
+                ピアノを通して<strong>お子さまと楽しい思い出</strong>を作れます。
+                ピアノが初めてでも大丈夫！親子で楽しく学びませんか？</p>
+            </div>
+            <img src="連弾.png" alt="連弾">
+        </div>
+                <div class="overview-section">
+            <img src="music-back036.jpg" alt="楽譜の写真">
+            <div class="overview-text">
+                <h3 class="highlight-title" style="font-size: 26px; color: #222; text-align: center;">好きな曲で楽しく練習！<br>世界にひとつだけのオリジナル楽譜</h3>
+                <p>            <strong>「この曲を弾いてみたい！」</strong>そんなお子さまの気持ちを大切にします。
+当教室では、講師が生徒さんのレベルに合わせて楽曲をアレンジ。
+<strong>「世界でたった一つの楽譜」</strong> を作成し、お子さまが無理なく楽しみながらピアノを学べるようにサポートします！</p>
+            </div>
+        </div>
+        <br>
+        <div class="overview-section">
+        <div class="section_A">
+            <div class="overview-text">
+                <h3 style="font-size: 28px; color: #222; text-align: center;">🎵 ピアノを習うと、こんな力が身につきます！ 🎵</h3>
+                <p>ピアノのレッスンは、ただ楽器を弾くことだけではありません。<br>お子さまの成長にとって大切な <strong>「リズム感・集中力・表現力」</strong>を育むことができます。<br>
+<strong>・リズム感 → 音楽を通じて、自然とテンポを意識できるようになります。</strong><br>
+<strong>・集中力 → 一曲を仕上げる経験が、学習や生活の集中力アップにつながります。</strong><br>
+<strong>・表現力 → 曲に込められた気持ちを表現することで、感受性が豊かになります。</strong><br>
+                <br>
+                 <div class="highlight-title2" class="overview-text2"><strong><font size="5">「ピアノで心を育てる♪」をテーマに、お子さまの成長をサポートいたします！</font></strong></div>
+                </p>
+            </div>
+        </div>
+        </div>
+            </section>
+    <!-- 各セクション -->
+    <section id="pricing">
+        <h2>🎹 料金プラン 🎹</h2>
+        <div class="pricing-container">
+            <h3>♪♪ じっくり1時間レッスンで、確実にステップアップ！！ ♪♪</h3>
+                    <div class="section_A">
+<p><font size="4"><strong>多くのピアノ教室では 1レッスン30分 が一般的</strong>ですが、当教室では <strong>最低1時間</strong> のレッスン時間を確保しています。<br>
+            これは、<strong>「短い時間では十分に理解し、身につけることが難しい」</strong>との考えから設けたものです。</font></p></div>
+            <p><font size="4">ゆとりのあるレッスン時間だからこそ、基礎をしっかりと定着させ、無理なく上達することができます。<br>
+            <strong>料金は、一般的な教室の二枠分に相当</strong>しており、大変良心的な設定となっております。</font></p>
+        </div>
+        
+        <table class="pricing-table">
+            <tr>
+                <th>レッスン内容</th>
+                <th>料金</th>
+                <th>特徴</th>
+            </tr>
+            <tr class="highlight-green">
+                <td><strong>🔹子供向けレッスン</strong><br>　 (月4回)</td>
+                <td>6,500円～</td>
+                <td>
+                    ✅ 月4回の個人レッスン<br>
+                    ✅ レベルに応じて価格が変動<br>
+                    ✅ <strong>1レッスン 最低1時間</strong><br>
+                    🎵 時間をかけて丁寧に指導し、お子さまの成長をしっかりとサポートいたします。
+                </td>
+            </tr>
+        </table>
+        
+        <font align="center" font size="8">
+        <p class="pricing-note">「時間をかけてしっかり学びたい」 という方に最適なレッスン環境をご用意しております。<br>
+        🎶 まずは、<strong>無料体験レッスン</strong> で、その違いをぜひご実感ください。 🎶</p> </font> 
+                             <a href="#contact" class="cta-button">📩 無料体験申し込み</a>
+  </section>
+    <section id="instructor">
+        
+                <h2>🎹 講師紹介 🎹</h2>
+        <div class="section_B">
+        <div class="instructor-container">
+            <img src="./images/kimi.jpg" alt="講師 小川公子">
+            <p>
+            <font size = "8">
+            <strong>小川公子</strong></font><br>
+            <font size = "6">
+                幼少期からピアノを始め、音楽系の高校に進み音大を卒業。<br>
+                40年以上の豊富な指導実績を持ち、子供から大人まで、趣味から受験まで幅広く指導可能です。
+            </font>
+            </p>
+        </div>
+        </div>
+    </section>
+    <!-- 問い合わせフォーム -->
+    <section id="contact">
+        <h2>🎹 お問い合わせ 🎹</h2>
+        <div class="line-center">
+            <img src="https://qr-official.line.me/gs/M_816cipfh_BW.png?oat_content=qr" alt="LINE QRコード" style="height: 100px;">
+        </div>
+        <div class="line-text-large">↑LINEアカウントです、お気軽にお問い合わせ下さい↑<br><br><font color="black">フォームでのお問い合わせは下よりお願いいたします。</font></div>                    <div class="contact-form">
+            <form id="inquiry-form">
+                <label for="name">お名前（必須）</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="age">年齢</label>
+                <input type="number" id="age" name="age">
+
+                <label for="phone">電話番号（任意）</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="email">メールアドレス（必須）</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="experience">ピアノ経験の有無</label>
+                <select id="experience" name="experience">
+                    <option value="あり">あり</option>
+                    <option value="なし">なし</option>
+                </select>
+
+                <label for="lesson-date">体験レッスンの希望日（任意）</label>
+                <input type="date" id="lesson-date" name="lesson-date">
+
+                <label for="message">問い合わせ内容（必須）</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">送信</button>
+            </form>
+        </div>
+    </section>    <section id="video">
+        <h2>🎹 動画 🎹</h2>
+        <p>教室やレッスンの様子を動画でご覧いただけます。</p>
+    </section>
+<section id="access">
+    <h2>🎹 アクセス情報 🎹</h2>
+    <div class="access-section">
+        <!-- 左カラム -->
+        <div class="parking-info">
+<img src="logo.png" alt="教室ロゴ" style="width: 200px; margin-bottom: 20px;">
+            <p><strong>〒923-0806<br>石川県小松市小寺町乙38番地1</strong></p>
+            <h3><font size="6">教室のご案内</font></h3>
+            <p><font size="4"><strong>向かって左が当教室</strong>となります。<br>
+            教室横に駐車場を８台分と駐輪場をご用意しております。</font></p>
+            <img src="e.jpg" alt="教室外観">
+        </div>
+
+        <!-- 右カラム（Googleマップ） -->
+<div class="map-container">
+    <iframe src="https://maps.app.goo.gl/Z2t9uB1SPQh2imxR9" loading="lazy"></iframe>
+</div>
+
+    </div>
+</section>
+
+    <footer>&copy; 2025 アリス音楽教室. All rights reserved.</footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 6000,
+                    disableOnInteraction: false,
+                },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true,
+                },
+                speed: 2500,
+            });
+
+            // 3秒後にロゴを非表示（フェードアウト追加）
+            setTimeout(() => {
+                const logoAnimation = document.getElementById('logoAnimation');
+                logoAnimation.style.opacity = '0';
+                setTimeout(() => {
+                    logoAnimation.style.display = 'none';
+                }, 2000);
+            }, 3000);
+
+            // 教室概要スライダーの切り替え処理
+            const images = document.querySelectorAll('#overviewSlider img');
+            let currentIndex = 0;
+
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
