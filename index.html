@@ -5,6 +5,7 @@
     <meta name="description" content="石川県小松市のアリス音楽教室。子ども・親子向けの個別ピアノレッスン。無料体験受付中！">
     <meta name="keywords" content="ピアノ教室,子供,個別指導,ピアノ,音楽教室,子供向け, 個別レッスン, 親子,連弾, 小松市,石川県, 初心者, 音楽レッスン">
     <meta name="author" content="アリス音楽教室">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>小松市のアリス音楽教室｜子どもと親子向けピアノレッスン</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -16,8 +17,9 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: #fff;
-            font-size: 54px;
+            font-size: 24px;
             font-weight: 700;
+            text-align: center;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
             font-family: 'Playfair Display', serif;
             z-index: 10;
@@ -53,13 +55,13 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        @media (max-width: 768px) {
+        @media screen and(max-width: 768px) {
     .overview-section {
         flex-direction: column;
         text-align: center;
     }
     .overview-section img {
-        width: 80%;
+        width: 100%;
     }
 }
 
@@ -403,6 +405,7 @@
         align-items: center;
         justify-content: center;
         gap: 30px;
+        flex-direction: column;
         margin-top: 40px;
         background-color: #ffc0cb; /* 背景色を追加 */
         padding: 30px; /* 内側の余白 */
