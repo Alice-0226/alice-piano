@@ -325,6 +325,8 @@
     position: relative;
     left: 80px; /* 画像の右側に配置 */
     top: -10px;
+    position: static;
+    text-align: center;
     transform: translateY(-50%);
     white-space: nowrap; /* テキストが折り返されるのを防ぐ */
 }
@@ -352,10 +354,12 @@
         .pricing-table th, .pricing-table td {
             border: 1px solid #ddd;
             padding: 12px;
+            font-size: 14px;
             text-align: left;
 
         }
         .pricing-table th {
+        font-size: 14px;
             background-color: pink;
         }
         .pricing-container {
@@ -372,9 +376,11 @@
             color: black;
         }
                 .pricing-table td:first-child {
+                font-size: 14px;
             width: 18%; /* 一文字分広げる */
         }
         .pricing-table td:nth-child(2) {
+        font-size: 14px;
             width: 10%; /* 一文字分広げる */
         }
         .highlight-green {
@@ -382,6 +388,7 @@
         }
                 .instructor-container {
             display: flex;
+            flex-direction: column
             align-items: center;
             gap: 20px;
         }
@@ -417,6 +424,7 @@
         align-items: center;
         justify-content: center;
         gap: 30px;
+        flex-direction: column;
         margin-top: 40px;
         background-color: white; /* 背景色を追加 */
         padding: 30px; /* 内側の余白 */
@@ -446,13 +454,13 @@
 }
         .cta-button {
             display: block;
-            width: 70%;
+            width: 90%;
             max-width: 240px;
             background-color: #ff4081;
             color: #fff;
             text-align: center;
             padding: 12px;
-            font-size: 22px;
+            font-size: 18px;
             font-weight: bold;
             border-radius: 8px;
             text-decoration: none;
