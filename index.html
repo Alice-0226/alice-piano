@@ -55,7 +55,7 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        @media screen and(max-width: 768px) {
+        @media screen and (max-width: 768px) {
     .overview-section {
         flex-direction: column;
         text-align: center;
@@ -470,6 +470,87 @@
         .cta-button:hover {
             background-color: #e91e63;
         }
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .main-visual-text {
+        font-size: 16px;
+        width: 90%;
+        padding: 10px;
+    }
+
+    .overview-section {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .overview-section img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .overview-text {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .pricing-table th, .pricing-table td {
+        font-size: 12px;
+    }
+
+    .line-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .line-text {
+        font-size: 16px;
+        position: static;
+    }
+
+    .line-text-large {
+        font-size: 18px;
+    }
+
+    .swiper {
+        height: auto;
+    }
+
+    .swiper-slide img {
+        height: auto;
+    }
+
+    .access-section {
+        flex-direction: column;
+    }
+
+    .parking-info, .map-container {
+        max-width: 100%;
+    }
+
+    .instructor-container img {
+        width: 90%;
+    }
+
+    .cta-button {
+        width: 80%;
+        font-size: 16px;
+    }
+}
+        
              </style>
 </head>
 <body>
@@ -603,7 +684,7 @@
                 <h2>🎹 講師紹介 🎹</h2>
         <div class="section_B">
         <div class="instructor-container">
-            <img src="./images/kimi.jpg" alt="講師 小川公子">
+            <img src="kimi.jpg" alt="講師 小川公子">
             <p>
             <font size = "8">
             <strong>小川公子</strong></font><br>
