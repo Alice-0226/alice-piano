@@ -54,7 +54,10 @@
       nav a { font-size:1.05rem; padding:.75rem 0; width:100%; }
       .menu-btn { display:inline-flex; }
     }
-
+    
+    /* Contact form button hover fix remains */
+    form.contact-form button:hover { background:var(--accent-dark); }
+    
     /* Hero */
     .hero { position:relative; height:clamp(420px,70vh,720px); overflow:hidden; }
     .hero .swiper { height:100%; }
@@ -346,17 +349,20 @@
       </div>
       <div class="contact-box">
         <h3>フォームから申し込む</h3>
-        <form class="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeV1tDIKenwX74LNvNeuf4CRzHCCKlyYm5f-bUsZY-bg8LCbQ/formResponse" method="post" target="_blank" rel="noopener">
+        <form class="contact-form" id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeV1tDIKenwX74LNvNeuf4CRzHCCKlyYm5f-bUsZY-bg8LCbQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
           <input name="entry.name" required placeholder="お子さまのお名前" />
           <input name="entry.age" required placeholder="年齢 / 学年" />
           <input name="entry.tel" required placeholder="電話番号" inputmode="tel" />
           <textarea name="entry.message" rows="4" placeholder="ご質問・ご希望 (例: 夕方希望 / 親子レッスン)"></textarea>
           <button type="submit">送信する</button>
         </form>
+        <!-- 非表示 iframe へ送信しページ遷移を防止 -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+        <!-- 送信完了メッセージ -->
+        <div class="form-thanks" style="display:none;text-align:center;font-size:.85rem;margin-top:.8rem;color:#0a8;">送信ありがとうございます！ 24時間以内に返信いたします。</div>
         <p style="font-size:.65rem; margin-top:.75rem;">※送信後2日以内に返信がない場合はLINEでご連絡ください。</p>
       </div>
-    </div>
-  </section>
+    </div>  </section>
 
   <!-- Access -->
   <section id="access">
