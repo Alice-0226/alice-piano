@@ -16,6 +16,33 @@
       --radius:14px; --ease:cubic-bezier(.55,.18,.16,.99);
       --grad:linear-gradient(135deg,#ffe3ec,#fff7d6);
     }
+    
+   function handleLocalSubmit(e){
+  e.preventDefault();                    // ① ページリロード阻止
+  const form   = e.target;
+  const btn    = form.querySelector('button');
+  const thanks = form.querySelector('.form-thanks');
+  btn.disabled = true;
+
+  fetch(form.action, {
+    method: 'POST',
+    body:   new FormData(form),
+    headers:{ 'Accept':'application/json' }
+  })
+  .then(()=>{
+     thanks.style.display='block';       // ② メッセージ表示
+     form.reset();                       // ③ 入力クリア
+  })
+  .catch(()=>alert('送信に失敗しました。LINEでもご連絡ください。'))
+  .finally(()=>btn.disabled=false);      // ④ ボタン復帰
+}
+
+document.getElementById('contactForm')
+        .addEventListener('submit', handleLocalSubmit);
+ 
+    
+    
+    
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; font-family:'Noto Sans JP',system-ui,Arial,sans-serif; color:#333; background:#fff; line-height:1.55; -webkit-text-size-adjust:100%; }
@@ -350,28 +377,26 @@
       <div class="contact-box">
         <h3>フォームから申し込む</h3>
         <!-- Contact Form (Formsubmit — 超シンプル版) -->
-<form class="contact-form" id="contactForm" action="https://formsubmit.co/ponpoko2121@gmail.com" method="POST" target="hidden_iframe" onsubmit="return handleLocalSubmit();">
-  <!-- Formsubmit hidden fields -->
+<form class="contact-form" id="contactForm" action="https://formsubmit.co/ponpoko2121@gmail.com" method="POST" onsubmit="return handleLocalSubmit(event);">
   <input type="hidden" name="_subject" value="ピアノ教室サイトからのお問い合わせ" />
   <input type="hidden" name="_captcha" value="false" />
   <input type="hidden" name="_template" value="table" />
-  <!-- _next を空にすると iframe 内で完結しリダイレクトなし -->
 
   <input type="text" name="name" required placeholder="お子さまのお名前" />
   <input type="text" name="age"  required placeholder="年齢 / 学年" />
   <input type="tel"  name="phone" required placeholder="電話番号" inputmode="tel" />
   <textarea name="message" rows="4" placeholder="ご質問・ご希望"></textarea>
   <button type="submit">送信する</button>
+  <p class="form-thanks" style="display:none;text-align:center;font-size:.85rem;margin-top:.8rem;color:#0a8;">送信ありがとうございます！ 24時間以内に返信いたします。</p>
 </form>
-<!-- 送信完了メッセージ -->
-<div class="form-thanks" style="display:none;text-align:center;font-size:.85rem;margin-top:.8rem;color:#0a8;">送信ありがとうございます！ 24時間以内に返信いたします。</div>
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+        
         <!-- 送信完了メッセージ -->
         <div class="form-thanks" style="display:none;text-align:center;font-size:.85rem;margin-top:.8rem;color:#0a8;">送信ありがとうございます！ 24時間以内に返信いたします。</div>
         <p style="font-size:.65rem; margin-top:.75rem;">※送信後2日以内に返信がない場合はLINEでご連絡ください。</p>
       </div>
     </div>
-            </section>
+                </section>
 
   <!-- Access -->
   <section id="access">
