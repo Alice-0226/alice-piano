@@ -356,7 +356,6 @@
   <input type="hidden" name="_captcha" value="false" />
   <input type="hidden" name="_template" value="table" />
   <!-- _next を空にすると iframe 内で完結しリダイレクトなし -->
-  <input type="hidden" name="_next" value="" />
 
   <input type="text" name="name" required placeholder="お子さまのお名前" />
   <input type="text" name="age"  required placeholder="年齢 / 学年" />
@@ -364,17 +363,15 @@
   <textarea name="message" rows="4" placeholder="ご質問・ご希望"></textarea>
   <button type="submit">送信する</button>
 </form>
-<!-- 完了メッセージは既存 .form-thanks を使用 --> hidden_iframe＋iframe 送信を削除 -->
-        <!-- 非表示 iframe へ送信しページ遷移を防止 -->-you message -->
+<!-- 送信完了メッセージ -->
 <div class="form-thanks" style="display:none;text-align:center;font-size:.85rem;margin-top:.8rem;color:#0a8;">送信ありがとうございます！ 24時間以内に返信いたします。</div>
-        <!-- 非表示 iframe へ送信しページ遷移を防止 -->
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
         <!-- 送信完了メッセージ -->
         <div class="form-thanks" style="display:none;text-align:center;font-size:.85rem;margin-top:.8rem;color:#0a8;">送信ありがとうございます！ 24時間以内に返信いたします。</div>
         <p style="font-size:.65rem; margin-top:.75rem;">※送信後2日以内に返信がない場合はLINEでご連絡ください。</p>
       </div>
     </div>
-        </section>
+            </section>
 
   <!-- Access -->
   <section id="access">
