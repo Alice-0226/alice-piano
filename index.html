@@ -17,29 +17,10 @@
       --grad:linear-gradient(135deg,#ffe3ec,#fff7d6);
     }
     
-   function handleLocalSubmit(e){
-  e.preventDefault();                    // ① ページリロード阻止
-  const form   = e.target;
-  const btn    = form.querySelector('button');
-  const thanks = form.querySelector('.form-thanks');
-  btn.disabled = true;
+    /* 既存の root 変数や全体レイアウトCSS は変更なし — 省略 */
 
-  fetch(form.action, {
-    method: 'POST',
-    body:   new FormData(form),
-    headers:{ 'Accept':'application/json' }
-  })
-  .then(()=>{
-     thanks.style.display='block';       // ② メッセージ表示
-     form.reset();                       // ③ 入力クリア
-  })
-  .catch(()=>alert('送信に失敗しました。LINEでもご連絡ください。'))
-  .finally(()=>btn.disabled=false);      // ④ ボタン復帰
-}
-
-document.getElementById('contactForm')
-        .addEventListener('submit', handleLocalSubmit);
- 
+    /* ----- フォームボタン hover だけ追加保持 ----- */
+    form.contact-form button:hover{background:var(--accent-dark);} 
     
     
     
@@ -365,39 +346,25 @@ document.getElementById('contactForm')
   </section>
 
   <!-- Contact -->
-  <section id="contact">
-    <h2>お問い合わせ / 無料体験</h2>
-    <div class="contact-wrap">
-      <div class="contact-box center">
-        <h3>LINEでかんたん相談</h3>
-        <img class="qr" src="https://qr-official.line.me/gs/M_816cipfh_BW.png?oat_content=qr" alt="LINE QRコード" loading="lazy">
-        <p style="font-size:.8rem;">QRコードを読み取り「体験希望」とメッセージください。</p>
-        <a class="cta-btn" href="#" aria-label="LINE 友だち追加">LINE 友だち追加</a>
-      </div>
       <div class="contact-box">
         <h3>フォームから申し込む</h3>
-        <!-- Contact Form (Formsubmit — 超シンプル版) -->
-<form class="contact-form" id="contactForm" action="https://formsubmit.co/ponpoko2121@gmail.com" method="POST" onsubmit="return handleLocalSubmit(event);">
-  <input type="hidden" name="_subject" value="ピアノ教室サイトからのお問い合わせ" />
-  <input type="hidden" name="_captcha" value="false" />
-  <input type="hidden" name="_template" value="table" />
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/ponpoko2121@gmail.com" method="POST">
+          <input type="hidden" name="_subject"  value="ピアノ教室サイトからのお問い合わせ">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha"  value="false">
 
-  <input type="text" name="name" required placeholder="お子さまのお名前" />
-  <input type="text" name="age"  required placeholder="年齢 / 学年" />
-  <input type="tel"  name="phone" required placeholder="電話番号" inputmode="tel" />
-  <textarea name="message" rows="4" placeholder="ご質問・ご希望"></textarea>
-  <button type="submit">送信する</button>
-  <p class="form-thanks" style="display:none;text-align:center;font-size:.85rem;margin-top:.8rem;color:#0a8;">送信ありがとうございます！ 24時間以内に返信いたします。</p>
-</form>
+          <input type="text" name="name"     required placeholder="お子さまのお名前" />
+          <input type="text" name="age"      required placeholder="年齢 / 学年" />
+          <input type="tel"  name="phone"    required placeholder="電話番号" inputmode="tel" />
+          <textarea name="message" rows="4" placeholder="ご質問・ご希望"></textarea>
 
-        
-        <!-- 送信完了メッセージ -->
-        <div class="form-thanks" style="display:none;text-align:center;font-size:.85rem;margin-top:.8rem;color:#0a8;">送信ありがとうございます！ 24時間以内に返信いたします。</div>
+          <button type="submit">送信する</button>
+          <p class="form-thanks" style="display:none;text-align:center;font-size:.85rem;margin-top:.8rem;color:#0a8;">送信ありがとうございます！ 24時間以内に返信いたします。</p>
+        </form>
         <p style="font-size:.65rem; margin-top:.75rem;">※送信後2日以内に返信がない場合はLINEでご連絡ください。</p>
       </div>
     </div>
-                </section>
-
+  </section>
   <!-- Access -->
   <section id="access">
     <h2>アクセス</h2>
