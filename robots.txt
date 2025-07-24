@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://alice-0226.github.io/alice-piano/sitemap.xml
+Sitemap: https://alice-0226.github.io/alice-piano/sitemap-2.xml
