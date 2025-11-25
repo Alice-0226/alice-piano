@@ -68,11 +68,37 @@
     form.contact-form button:hover { background:var(--accent-dark); }
     
     /* Hero */
+/* Hero */
+.hero { position:relative; height:clamp(420px,70vh,720px); overflow:hidden; }
+
+/* swiperを“背景”に固定して背面へ */
+.hero .swiper{
+  position:absolute;
+  inset:0;
+  height:100%;
+  z-index:0;
+}
+
+/* テキスト・ボタンを前面へ（左右指定もシンプルに） */
+.hero-copy{
+  position:absolute;
+  left:50%;
+  bottom:8%;
+  transform:translateX(-50%);
+  z-index:2;                 /* ←これが重要 */
+  background:rgba(255,255,255,.25);
+  backdrop-filter:blur(3px);
+  padding:1rem 1.2rem 1.2rem;
+  border-radius:16px;
+  width:min(92%,600px);
+  text-align:center;
+  box-shadow:0 8px 24px -8px rgba(0,0,0,.25);
+}
     .hero { position:relative; height:clamp(420px,70vh,720px); overflow:hidden; }
     .hero .swiper { height:100%; }
     .hero .swiper-slide img { width:100%; height:100%; object-fit:cover; }
-    .hero-copy { position:absolute; inset:auto 50% 8% 50%; transform:translate(-50%,0); background:rgba(255,255,255,.88); backdrop-filter:blur(3px); padding:1rem 1.2rem 1.2rem; border-radius:16px; width:min(92%,600px); text-align:center; box-shadow:0 8px 24px -8px rgba(0,0,0,.25); }
-    .hero-copy h1 { margin:.2rem 0 .6rem; font-size:clamp(1.35rem,5vw,2rem); }
+    .hero-copy { position:absolute; inset:auto 50% 8% 50%; transform:translate(-50%,0); background:rgba(255,255,255,.25); backdrop-filter:blur(3px); padding:1rem 1.2rem 1.2rem; border-radius:16px; width:min(92%,600px); text-align:center; box-shadow:0 8px 24px -8px rgba(0,0,0,.25); }
+	.hero-copy h1 { margin:.2rem 0 .6rem; font-size:clamp(1.05rem,3.6vw,1.45rem); }
     .hero-badges { display:flex; justify-content:center; flex-wrap:wrap; gap:.5rem; margin-bottom:.65rem; }
 
     .cta-btn { display:inline-block; background:var(--accent); color:#fff; padding:.85rem 1.6rem; font-weight:700; border-radius:999px; letter-spacing:.05em; box-shadow:0 4px 12px -3px rgba(233,30,99,.55); transition:transform .2s var(--ease), box-shadow .25s; }
@@ -253,14 +279,10 @@
         <div class="swiper-slide"><img src="aa.jpg" alt="レッスン風景2" loading="lazy"></div>
       </div>
     </div>
-    <div class="hero-copy">
-      <div class="hero-badges">
-        <span class="tag">60分個別</span><span class="tag">親子連弾OK</span><span class="tag">無料体験</span>
-      </div>
-      <h1>アリス音楽教室（小松市）— 子ども60分レッスン</h1>
-      <p style="margin:.2rem 0 1rem; font-size:.9rem;">集中が続くテンポの良いレッスンで“音を楽しむ”力を育てます。</p>
-      <a class="cta-btn" href="#contact">📩 無料体験を申し込む</a>
-    </div>
+<div class="hero-copy">
+  <h1>アリス音楽教室（小松市）— 60分レッスン</h1>
+  <a class="cta-btn" href="#contact">📩 無料体験を申し込む</a>
+</div>
   </section>
 
   <!-- Features -->
@@ -373,7 +395,11 @@
         <p style="font-size:.8rem;">QRコードを読み取り「体験希望」とメッセージください。</p>
         <a class="cta-btn" href="https://line.me/R/ti/p/%40816cipfh" target="_blank" rel="noopener" aria-label="LINE 友だち追加">LINE友だち追加</a>
       </div>
-      
+  <div class="contact-box center">
+    <h3>お電話はこちらより</h3>
+    <p style="font-size:1.15rem;font-weight:800;letter-spacing:.02em;margin:.2rem 0 1rem;">090-6526-4543</p>
+    <a class="cta-btn" href="tel:09065264543" aria-label="電話をかける">📞 電話をかける</a>
+  </div>      
       <div class="contact-box">
         <h3>フォームから申し込む</h3>
         <form class="contact-form" id="contactForm" action="https://formsubmit.co/ponpoko2121@gmail.com" method="POST">
