@@ -7,26 +7,16 @@
   <link rel="canonical" href="https://alice-0226.github.io/alice-piano/" />
 <meta property="og:url" content="https://alice-0226.github.io/alice-piano/" />
 <meta property="og:locale" content="ja_JP" />
+<link rel="icon" href="/alice-piano/favicon.ico" />
+<meta property="og:image" content="https://alice-0226.github.io/alice-piano/logo2.png" />
+<meta property="og:image:width" content="2600" />
+<meta property="og:image:height" content="528" />
 
   <!-- Site Name (Google/OGP対策) -->
 <meta property="og:site_name" content="アリスピアノ教室" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="小松市のピアノ教室｜アリスピアノ教室" />
-
-<!-- 構造化データ：サイト名 -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "アリスピアノ教室",
-  "url": "https://alice-0226.github.io/alice-piano/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://alice-0226.github.io/alice-piano/?s={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
+<meta property="og:title" content="アリスピアノ教室（小松市）｜60分個別レッスン" />
+<meta property="og:description" content="石川県小松市のアリスピアノ教室。子ども・親子向け個別ピアノレッスン／無料体験受付中。1回60分でじっくり学べる！" />
 
   <meta name="description" content="石川県小松市のアリスピアノ教室。子ども・親子向け個別ピアノレッスン／無料体験受付中。1回60分でじっくり学べる！" />
   <!-- Google Search Console verification -->
@@ -189,21 +179,6 @@
       .price { font-size:1.35rem; }
     }
   </style>
-  <!-- JSON-LD structured data for LocalBusiness -->
-  <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "MusicSchool",
-    "name": "アリスピアノ教室",
-    "image": "https://example.com/logo.png",
-    "address": {"@type":"PostalAddress","streetAddress":"小寺町乙38番地1","addressLocality":"小松市","addressRegion":"石川県","postalCode":"923-0806","addressCountry":"JP"},
-    "geo": {"@type":"GeoCoordinates","latitude":36.41025,"longitude":136.45310},
-    "url": "https://example.com/",
-    "telephone": "+81-00-0000-0000",
-    "priceRange": "¥¥",
-    "description": "子ども・親子向けの個別ピアノレッスン。1回60分・無料体験あり。",
-    "founder":"小川公子",
-    "areaServed":"石川県小松市"
-  }</script>
   <style>
     /* ===== Intro Logo Animation (Optimized Image Version) ===== */
     /* 目的: 透過PNGロゴ (logo2.png) を初回のみスムーズにフェード + マスクワイプ + 軽いスケールで表示し、短時間で本体へ移行。
@@ -243,29 +218,12 @@
   </style>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "MusicSchool",
-  "name": "アリスピアノ教室",
-  "url": "https://alice-0226.github.io/alice-piano/",
-  "telephone": "090-6526-4543",
-  "address": {
-    "@type": "PostalAddress",
-    "postalCode": "〒923-0806",
-    "addressRegion": "石川県",
-    "addressLocality": "小松市",
-    "streetAddress": "小寺町乙38番地1"
-  },
-  "areaServed": "小松市",
-  "image": "https://alice-0226.github.io/alice-piano/logo2.png",
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "12:00",
-    "closes": "21:00"
-  }]
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"アリスピアノ教室",
+  "url":"https://alice-0226.github.io/alice-piano/"
 }
 </script>
-  
 </head>
 <body>
   <!-- Intro Animation (Image Based) -->
@@ -342,7 +300,7 @@
 
   <!-- 60min Value Section (moved before Pricing) -->
   <section class="value-60" id="why60">
-  <h2 class="sec-title">60分レッスンのポイント　<font size=5>(初級の方は30～40分 教材により変動します)</font></h2>
+  <h2 class="sec-title">60分レッスンのポイント　<font size=5>(初級の方は３０～４０分 教材により変動します)</font></h2>
   <div class="value-60__grid" style="display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));align-items:start;">
     <div class="value-60__card" style="background:#fff;border:1px solid #eee;padding:1.05rem 1.1rem 1.2rem;border-radius:18px;">
       <h3 style="margin:.2rem 0 .5rem;font-size:1.02rem;">時間あたりの負担が低い</h3>
@@ -537,14 +495,3 @@
 
 </body>
 </html>
-</html>
-<!-- 改善ポイント概要:
-1. モバイル最適化: 固定幅レイアウト排除, clamp(), grid, flex, fluid spacing, モバイルナビ(スライド). hero 高さ調整.
-2. 行動導線: 主要CTAを fold 内に一貫配置。料金内にも複数CTA.
-3. 信頼要素: 保護者の声, FAQ, 指導歴, 振替柔軟性, 発表ミニ会追加.
-4. SEO: schema.org MusicSchool JSON-LD, 見出し構造整理, キーワード自然配置, 速度配慮(lazy, aspect-ratio).
-5. アクセシビリティ: aria-label, aria-expanded, コントラスト/フォーカス, semantic lists.
-6. コンバージョン: 60分レッスン差別化, 小さな成功体験, 継続率訴求, 体験→提案フロー明確化.
-7. フォーム: シンプル項目 + 注意書き.
-8. 再利用できるユーティリティクラス追加.
--->
